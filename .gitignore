@@ -128,26 +128,8 @@ userapp
 userapp/
 
 
-# Ignore everything
-*
-
-# But not these files...
-!.gitignore
-!package.json
-!.eslintrc.json
-!README.md
-# etc...
-
-# ...even if they are in subdirectories
-!*/
-
-# if the files to be tracked are in subdirectories
-!*/api/*
-!*/config/*
-recipes/api/
-recipes/config/
-recipes/database/
-recipes/index.js
-recipes/knexfile.js
-recipes/package-lock.json
-recipes
+ 
+recipes/node_modules
+recipes/database/auth.db3
+recipes/database/*.db3
+recipes/package-lock.json 
