@@ -126,3 +126,27 @@ auth.db3
 .vscode
 userapp
 userapp/
+
+
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!package.json
+!.eslintrc.json
+!README.md
+# etc...
+
+# ...even if they are in subdirectories
+!*/
+
+# if the files to be tracked are in subdirectories
+!*/api/*
+!*/config/*
+api/
+config/
+database/
+index.js
+knexfile.js
+package-lock.json
