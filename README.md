@@ -18,3 +18,5 @@ GET   |  /api/auth/user     | Get User settings
 GET   |   /api/recipes      | All user's recipes
 POST  |   /api/recipes      | Add another recipe
 DELETE|   /api/recipes/:id  | Delete recipe based by id
+GET   |   /api/recipes/:id  | Get recipe based by id
+PUT   |   /api/recipes/:id  | Update recipe based by id
