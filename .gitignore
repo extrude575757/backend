@@ -127,3 +127,4 @@ auth.db3
 userapp/
 /userapp
  
+node_modules
