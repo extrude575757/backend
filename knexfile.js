@@ -6,10 +6,28 @@ const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhos
 module.exports = {
   development: {
     client: "sqlite3",
-    useNullAsDefault: true,
     connection: {
       filename: "./database/auth.db3",
     },
+    useNullAsDefault: true,
+    pool: {
+      afterCreate: (conn, done) => {
+        conn.run("PRAGMA foreign_keys = ON", done);
+      },
+    },
+    migrations: {
+      directory: "./database/migrations",
+    },
+    seeds: {
+      directory: "./database/seeds",
+    },
+  },
+  development: {
+    client: "sqlite3",
+    connection: {
+      filename: "./database/auth.db3",
+    },
+    useNullAsDefault: true,
     pool: {
       afterCreate: (conn, done) => {
         conn.run("PRAGMA foreign_keys = ON", done);
@@ -23,18 +41,30 @@ module.exports = {
     },
   },
 
-  production: {
-    client: "pg",
-    connection: pgConnection,
-    pool: {
-      min: 2,
-      max: 10,
-    },
-    migrations: {
-      directory: "./database/migrations",
-    },
-    seeds: {
-      directory: "./database/seeds",
-    },
+
+  staging: {
+
   },
+
+  production: {
+
+  }
+
+
+
+
+  // production: {
+  //   client: "pg",
+  //   connection: pgConnection,
+  //   pool: {
+  //     min: 2,
+  //     max: 10,
+  //   },
+  //   migrations: {
+  //     directory: "./database/migrations",
+  //   },
+  //   seeds: {
+  //     directory: "./database/seeds",
+  //   },
+  // },
 };
