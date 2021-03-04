@@ -22,7 +22,7 @@ module.exports = {
       directory: "./database/seeds",
     },
   },
-  development: {
+  testing: {
     client: "sqlite3",
     connection: {
       filename: "./database/auth.db3",
