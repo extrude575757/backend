@@ -47,7 +47,7 @@ module.exports = {
     client: "pg",
     // connection: pgConnection,   3.91.73.211
     connection: {
-      host : '0.0.0.0',
+      host : '3.91.73.211',
       user : 'uwunjfyfwkqwhn',
       password : 'fjdds',
       database : 'de04oan147dm36'
