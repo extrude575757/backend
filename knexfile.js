@@ -43,10 +43,15 @@ module.exports = {
 
 
 
-
   production: {
     client: "pg",
-    connection: pgConnection,
+    // connection: pgConnection,   3.91.73.211
+    connection: {
+      host : '0.0.0.0',
+      user : 'uwunjfyfwkqwhn',
+      password : 'fjdds',
+      database : 'de04oan147dm36'
+    },
     pool: {
       min: 2,
       max: 10,
@@ -58,6 +63,21 @@ module.exports = {
       directory: "./database/seeds",
     },
   },
+  // production: {
+  //   client: "pg",
+  //   // connection: pgConnection,
+    
+  //   pool: {
+  //     min: 2,
+  //     max: 10,
+  //   },
+  //   migrations: {
+  //     directory: "./database/migrations",
+  //   },
+  //   seeds: {
+  //     directory: "./database/seeds",
+  //   },
+  // },
   staging: {
 
   },
