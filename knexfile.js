@@ -52,10 +52,10 @@ module.exports = {
       password : 'fjdds',
       database : 'de04oan147dm36'
     },
-    pool: {
-      min: 2,
-      max: 10,
-    },
+    // pool: {
+    //   min: 2,
+    //   max: 10,
+    // },
     migrations: {
       directory: "./database/migrations",
     },
