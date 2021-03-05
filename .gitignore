@@ -119,8 +119,8 @@ dist
 .DS_Store
 
 # Removes database
-database/auth.db3
-auth.db3
+# database/auth.db3
+# auth.db3
 
 # VSCode
 .vscode
